@@ -25,6 +25,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+  "expo": {
+    "name": "techcall",
+    "slug": "techcall",
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permita o acesso à localização para registrar o local do chamado."
+        }
+      ]
+    ]
   }
+}
 }
