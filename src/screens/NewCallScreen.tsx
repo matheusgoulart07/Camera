@@ -15,7 +15,8 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db, ALUNO_ID } from '../firebase/config';
 
 
-export default function NewCallScreen() {
+
+export default function NewCallScreen({ navigation }: any) {
   // ==============================
   // ESTADOS
   // ==============================
@@ -188,6 +189,7 @@ export default function NewCallScreen() {
     setDescription('');
     setPhotoUri(null);
     setAddress(null);
+    navigation.navigate('CallList');
   } catch (error) {
     Alert.alert('Erro', 'Não foi possível salvar o chamado. Tente novamente.');
   } finally {
